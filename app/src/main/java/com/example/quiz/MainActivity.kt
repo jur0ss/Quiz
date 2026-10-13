@@ -1,6 +1,9 @@
 package com.example.quiz
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,27 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        data class Pytanie(
+            var tresc: String = "",
+            var img: String = ""
+        )
+
+        val listPytan = arrayOf<Pytanie>(
+            Pytanie("Jak nazywa sie ta mapa", "lake,jpg")
+        )
+
+        val pytanieImageView: ImageView = findViewById(R.id.pytanieImageView)
+        var pytanieTextView: TextView = findViewById(R.id.pytanieTextView)
+        val odpowiedzTextView: TextView = findViewById(R.id.odpowiedzTextView)
+        val odpowiedz2TextView: TextView = findViewById(R.id.odpowiedz2TextView)
+        val odpowiedz3TextView: TextView = findViewById(R.id.odpowiedz3TextView)
+        val dalejButton: Button = findViewById(R.id.dalejButton)
+
+
     }
+
+
+
+
 }
