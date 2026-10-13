@@ -3,6 +3,7 @@ package com.example.quiz
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.RadioButton
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -22,19 +23,43 @@ class MainActivity : AppCompatActivity() {
 
         data class Pytanie(
             var tresc: String = "",
-            var img: String = ""
+            var img: Int = 0,
+            var trescOdpowiedziA: String = "",
+            var trescOdpowiedziB: String = "",
+            var trescOdpowiedziC: String = "",
+            var poprawnaOdpowiedz: Char,
         )
 
-        val listPytan = arrayOf<Pytanie>(
-            Pytanie("Jak nazywa sie ta mapa", "lake,jpg")
+        val listaPytan = arrayOf<Pytanie>(
+            Pytanie("Jak nazywa sie ta mapa?", R.drawable.lake,
+                "Rialto", "Lake",
+                "Safehouse", 'B'),
+            Pytanie("Ile dolarów kosztuje AWP?", R.drawable.awp, "3500", "4250", "4750", 'C'),
+            Pytanie("Jaki nick ma ten gracz komputerowy?", R.drawable.snax, "Snax", "pashaBiceps", "NEO", 'A')
         )
 
-        val pytanieImageView: ImageView = findViewById(R.id.pytanieImageView)
+        var pytanieImageView: ImageView = findViewById(R.id.pytanieImageView)
         var pytanieTextView: TextView = findViewById(R.id.pytanieTextView)
-        val odpowiedzTextView: TextView = findViewById(R.id.odpowiedzTextView)
-        val odpowiedz2TextView: TextView = findViewById(R.id.odpowiedz2TextView)
-        val odpowiedz3TextView: TextView = findViewById(R.id.odpowiedz3TextView)
+        val odpowiedzRadio: RadioButton = findViewById(R.id.odpowiedzRadio)
+        val odpowiedz2Radio: RadioButton = findViewById(R.id.odpowiedz2Radio)
+        val odpowiedz3Radio: RadioButton = findViewById(R.id.odpowiedz3Radio)
         val dalejButton: Button = findViewById(R.id.dalejButton)
+
+
+
+
+
+
+
+        dalejButton.setOnClickListener {
+            var index = 1
+            var pytanie = listaPytan[index]
+            pytanieImageView.setImageResource(pytanie.img)
+            pytanieTextView.text = pytanie.tresc
+            odpowiedzRadio.text = pytanie.trescOdpowiedziA
+            odpowiedz2Radio.text = pytanie.trescOdpowiedziB
+            odpowiedz3Radio.text = pytanie.trescOdpowiedziC
+        }
 
 
     }

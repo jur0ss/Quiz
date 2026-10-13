@@ -38,24 +38,24 @@
             android:layout_gravity="left">
 
             <RadioButton
-                android:id="@+id/odpowiedzTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Rialto"
+                android:id="@+id/odpowiedzRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
 
             <RadioButton
-                android:id="@+id/odpowiedz2TextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="Lake"
+                android:id="@+id/odpowiedz2Radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
 
             <RadioButton
-                android:id="@+id/odpowiedz3TextView"
+                android:text="Safehouse"
+                android:id="@+id/odpowiedz3Radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Safehouse"
                 android:textColor="@color/white"/>
 
         </RadioGroup>
