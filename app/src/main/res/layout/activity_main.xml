@@ -17,17 +17,16 @@
         android:padding="5dp">
 
     <ImageView
+        android:scaleType="fitCenter"
         android:id="@+id/pytanieImageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/lake"
-        android:padding="5dp"/>
+        android:layout_width="400dp"
+        android:layout_height="200dp"
+        android:padding="5dp" />
 
     <TextView
         android:id="@+id/pytanieTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Jak nazywa sie ta mapa?"
         android:textSize="30sp"
         android:textColor="@color/white"/>
 
@@ -38,22 +37,19 @@
             android:layout_gravity="left">
 
             <RadioButton
-                android:text="Rialto"
-                android:id="@+id/odpowiedzRadio"
+                android:id="@+id/odpowiedzARadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
 
             <RadioButton
-                android:text="Lake"
-                android:id="@+id/odpowiedz2Radio"
+                android:id="@+id/odpowiedzBRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
 
             <RadioButton
-                android:text="Safehouse"
-                android:id="@+id/odpowiedz3Radio"
+                android:id="@+id/odpowiedzCRadio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"/>
